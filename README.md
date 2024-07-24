@@ -1,19 +1,19 @@
-threex.videotexture
+# Matrix Texture
 ===================
 
-threex.videotexture is a [threex game extension for three.js](http://www.threejsgames.com/extensions/).
+Matrix Texture is a [threex game extension for three.js](http://www.threejsgames.com/extensions/).
 It provides help to handle videos in texture.
 It is possible to put html5 ```<video>``` output in texture with ```threex.videotexture.js```.
 You can even put the webcam in a texture with ```threex.webcamtexture.js```.
-It is cool if you want to make a tv screen in your game, You can easily use this extension. You pick the video to play and you are ready to go. 
+It is cool if you want to make a TV screen in your game, You can easily use this extension. You pick the video to play and you are ready to go. 
 The screen surface will use your video texture making it look like a TV set.
 If you need it, you can try ```threex.audiovideotexture.js``` where the
-video is mapped on the texture and additionnally the sound of the video
+video is mapped on the texture and additionally the sound of the video
 is handled via 
 [web audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html).
 Thus you can have localized sound, which is neat in the 3d environment.
 
-Show Don't Tell
+Take A Look
 ===============
 * Here is a [videotexture example](http://jeromeetienne.github.io/threex.videotexture/examples/videotexture.html) and its [source](https://github.com/jeromeetienne/threex.videotexture/blob/master/examples/videotexture.html).
 It read the video from a file via video dom element and display it in a texture
