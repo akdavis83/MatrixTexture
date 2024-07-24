@@ -8,31 +8,22 @@ You can even put the webcam in a texture with ```threex.webcamtexture.js```.
 It is cool if you want to make a TV screen in your game, You can easily use this extension. You pick the video to play and you are ready to go. 
 The screen surface will use your video texture making it look like a TV set.
 If you need it, you can try ```threex.audiovideotexture.js``` where the
-video is mapped on the texture and additionally the sound of the video
+video is mapped on the texture and the sound of the video
 is handled via 
 [web audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html).
 Thus you can have localized sound, which is neat in the 3d environment.
 
 Take A Look
 ===============
-* Here is a [videotexture example](http://jeromeetienne.github.io/threex.videotexture/examples/videotexture.html) and its [source](https://github.com/jeromeetienne/threex.videotexture/blob/master/examples/videotexture.html).
-It read the video from a file via video dom element and display it in a texture
-* Here is a [audio/video texture example with WebAudio API](http://jeromeetienne.github.io/threex.videotexture/examples/audiovideotexture.html)and its [source](https://github.com/jeromeetienne/threex.videotexture/blob/master/examples/audiovideotexture.html).
-It shows how to plug the video sound into the WebAudio API because you get localised sounds.
-This is particularly useful in 3D.
-"Audio/Video" texture is a texture where the sound comes from the object3d on which 
-the texture is mapped.
-* Here is another [webcam example](http://jeromeetienne.github.io/threex.videotexture/examples/webcamtexture.html) and its [source](https://github.com/jeromeetienne/threex.videotexture/blob/master/examples/webcamtexture.html).
-It reads the webcam thru getUserMedia and put it in a texture.
+* Here is an example: https://akdavis83.github.io/MatrixTexture/
+It reads the video from a file via video DOM element and displays it in a texture
 
-A Screenshot
-============
-[![screenshot](https://raw.githubusercontent.com/jeromeetienne/threex.videotexture/master/examples/images/screenshot-threex-videotexture-512x512.jpg)](http://jeromeetienne.github.io/threex.videotexture/examples/videotexture.html)
 
-How To Install It
-=================
 
-You can install it manually. Just do 
+How To Install
+==============
+
+You can install this manually. Type:
 
 ```html
 <script src='threex.videotexture.js'></script>
@@ -55,9 +46,9 @@ How To Use it
 
 ## threex.videotexture.js
 
-First you instanciate the texture itself
+First, you instantiate the texture itself:
 
-```javascript
+```JAVASCRIPT
 // create the videoTexture
 var videoTexture= new THREEx.VideoTexture('videos/sintel.ogv')
 updateFcts.push(function(delta, now){
@@ -68,7 +59,7 @@ updateFcts.push(function(delta, now){
 
 Then you use it in a mesh like this.
 	
-```javascript
+```JS
 // use the texture in a THREE.Mesh
 var geometry	= new THREE.CubeGeometry(1,1,1);
 var material	= new THREE.MeshBasicMaterial({
@@ -89,11 +80,10 @@ Here is the detailled API:
 
 It will read the webcam using
 [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia).
-The browser
-will likely ask for permissions to the users.
-Let's see how to use it. You instanciate the texture itself.
+The browser will likely ask for permission.
+Let's see how to use it. You instantiate the texture itself.
 
-```javascript
+```JS
 var webcamTexture	= new THREEx.WebcamTexture()
 updateFcts.push(function(delta, now){
 	// to update the texture are every frame
